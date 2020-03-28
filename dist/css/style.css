@@ -35,7 +35,7 @@ body {
 .figures {
     padding: 25px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
     color: #fff;
 }
@@ -55,7 +55,7 @@ body {
 
 .two-column {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 15px;
 }
 
@@ -89,10 +89,58 @@ body {
     background-color: rgb(175, 6, 6);
 }
 
+.cases:nth-child(4) {
+    background-color: rgb(10, 137, 221);
+}
+
 .deaths {
     background-color: rgb(175, 6, 6) !important;
 }
 
+.countries {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+}
+
+.country {
+    background-color: rgb(90, 90, 90);
+border: 1px solid #ffff;
+}
+
+.country-list {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.country-list > li {
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+    height: 48px;
+}
+
+.country-list > li:first-child {
+    border-top: 1px solid #fff;
+}
+
+.country-list > li:nth-child(even) {
+    background-color: rgb(31, 31, 31);
+}
+
+.country-list > li:nth-child(odd) {
+    background-color: rgb(63, 63, 63);
+}
+
+.country-list > li > b {
+    float: left;
+}
+
+.country-list > li > span {
+    float: right;
+    display: block;
+    overflow: hidden;
+}
 
 @media(max-width: 1236px) {
     .banner {
@@ -125,11 +173,7 @@ body {
         font-size: 1.1em;
     }
 
-    .icon> i {
-        /* display: block; */
-        /* padding-right: 0px; */
-        /* padding-bottom: 5px; */
-    }
+ 
 
     .column-1 > h1,
     .column-2 > h1 {
@@ -155,5 +199,9 @@ body {
 
     .figures {
         grid-template-columns: 1fr !important;
+    }
+
+    .countries {
+        grid-template-columns: 1fr;
     }
 }
